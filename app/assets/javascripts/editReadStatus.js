@@ -1,11 +1,11 @@
 var readLink = {
-  undread: 'read',
-  read: 'unread'
+  read: 'read',
+  unread: 'read'
 };
 
 var unreadLink = {
-  read: 'read',
-  unread: 'read',
+  undread: 'read',
+  read: 'unread'
 };
 
 function increaseReadStatus() {
