@@ -1,6 +1,6 @@
 class Link < ActiveRecord::Base
-  # validates :title, :url, presence: true
+  validates :title, :url, presence: true
   default_scope -> { order(id: :desc) }
-  enum read: [:false, :true]
+  enum read: [:unread, :read]
   belongs_to :user
 end

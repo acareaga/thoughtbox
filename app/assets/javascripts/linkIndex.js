@@ -15,7 +15,7 @@ function fetchLinks() {
 
 function renderIndex(link) {
   $("#link-index").append(
-    "<tbody class='idea' data-id='"+ link.id +"' link-read='"+ link.read +"'>"
+    "<tbody class='link' data-id='"+ link.id +"' link-read='"+ link.read +"'>"
       +"<td id='link-title' contenteditable='true'>"+ link.title +"</td>"
       +"<td id='link-url' contenteditable='true'>"+ link.url +"</td>"
       +"<td id='link-read'>"+ link.read +"</td>"
@@ -26,7 +26,7 @@ function renderIndex(link) {
   )
 };
 
-function renderLink(idea) {
+function renderLink(link) {
   $("#link-index").prepend(
     "<tbody class='link' data-id='"+ link.id +"' link-read='"+ link.read +"'>"
       +"<td id='link-title' contenteditable='true'>"+ link.title +"</td>"

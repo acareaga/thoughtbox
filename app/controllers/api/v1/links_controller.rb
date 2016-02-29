@@ -6,20 +6,20 @@ class Api::V1::LinksController < ApplicationController
   end
 
   def create
-    respond_with Link.create(link_params)
+    respond_with current_user.links.create(link_params), location: nil
   end
 
   def update
-    respond_with Link.update(params[:id], link_params)
+    respond_with current_user.links.update(params[:id], link_params)
   end
 
   def destroy
-    respond_with Link.delete(params[:id]), nil
+    respond_with current_user.links.delete(params[:id]), nil
   end
 
   private
 
   def link_params
-    params.permit(:title)
+    params.permit(:title, :url, :read)
   end
 end

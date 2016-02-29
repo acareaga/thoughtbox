@@ -1,11 +1,11 @@
 var readLink = {
-  false: 'true',
-  false: 'false'
+  undread: 'read',
+  read: 'unread'
 };
 
 var unreadLink = {
-  false: 'false',
-  true: 'false',
+  read: 'read',
+  unread: 'read',
 };
 
 function increaseReadStatus() {
@@ -40,7 +40,7 @@ function decreaseReadStatus() {
       url: '/api/v1/links/' + linkId,
       data: data,
       success: function() {
-        quality.text(unreadLink[qualityText]);
+        status.text(unreadLink[statusText]);
       }
     })
   })
