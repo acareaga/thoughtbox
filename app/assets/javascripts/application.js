@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  fetchLinks();
+  createLink();
+  deleteLink();
+  editLinkTitle();
+  editLinkUrl();
+  linkSearch();
+  increaseReadStatus();
+  decreaseReadStatus();
+});

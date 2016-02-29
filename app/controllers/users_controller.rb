@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:email_address] = @user.email_address
       flash[:notice] = "Account Created!"
-      redirect_to links_path
+      redirect_to root_path
     else
       flash[:notice] = "Invalid user credentials. Please try again."
       redirect_to login_path
@@ -31,8 +31,4 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:email_address, :password)
   end
-
-  # def ensure_email_is_unique
-  #   session[:email_address].uniq
-  # end
 end
