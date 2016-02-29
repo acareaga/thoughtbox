@@ -5,11 +5,43 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
 </head>
-<body>
-  <%= link_to "Logout", logout_path %><br><br>
+  <main>
+  <body>
+    <header>
+      <nav class="z-depth-0 navbar">
+        <div class="nav-wrapper blue-grey lighten-1">
+          <a href="/" class="brand-logo black-text center" id="navbar-branding">Thoughtbox</a>
+          <ul id="nav-mobile black-text" class="right hide-on-med-and-down">
+             <li><%= link_to "Login", login_path %> </li>
+             <li><%= link_to "Sign Up", new_user_path %> </li>
+             <li><%= link_to "Logout", logout_path %> </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <br>
+    <% flash.each do |type, msg| %>
+        <%= content_tag :div, sanitize(msg), class: " flash flash_#{type}" %>
+    <% end %>
+    <br>
 
-<%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
 
+    <br>
+    </main>​
+    <footer class="page-footer white">
+      <div class="footer-copyright">
+        <div class="container">
+          <a class="black-text text-lighten-4 left" href="https://github.com/acareaga" target="_blank">Made by Aaron Careaga</a>
+          <div class= "black-text text-lighten-4 right">© 2016 Thoughtbox</div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </body>
 </html>

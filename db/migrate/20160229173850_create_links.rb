@@ -4,6 +4,7 @@ class CreateLinks < ActiveRecord::Migration
       t.string :title
       t.string :url
       t.integer :read, default: 0
+      t.integer :user_id
 
       t.timestamps null: false
     end

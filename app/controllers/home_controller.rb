@@ -1,5 +1,8 @@
 class HomeController < ApplicationController
 
-  def index
+  def show
+    if current_user
+      redirect_to links_path
+    end
   end
 end

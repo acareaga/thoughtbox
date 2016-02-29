@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'home#index'
+  root 'home#show'
   resources :users, only: [:new, :create, :show]
   resources :links, only: [:new, :create, :show, :index]
 
