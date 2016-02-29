@@ -1,1 +1,12 @@
-TEST TEST
+Sign Up:
+<br><br>
+
+<%= form_for(:user, url: users_path) do |f| %>
+  <%= f.label :email_address %><br>
+  <%= f.text_field :email_address %><br>
+  <%= f.label :password %><br>
+  <%= f.password_field :password %><br>
+  <%= f.label :confirm_password %><br>
+  <%= f.password_field :password %><br>
+  <%= f.button "Create" %>
+<% end %>

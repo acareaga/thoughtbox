@@ -4,14 +4,17 @@ class UsersController < ApplicationController
     @new_user = User.new
   end
 
+  # need to check uniquenss of email address on sign up
+  # && User.find(session[:user_id]).exists?
+
   def create
-    @user = User.new(user_creation_params)
+    @user = User.new(user_params)
     if @user.save
-      session[:user_id] = @user.id
-      flash[:notive] = "Account Created!"
-      redirect_router(@user)
+      session[:email_address] = @user.email_address
+      flash[:notice] = "Account Created!"
+      redirect_to links_path
     else
-      flash[:error] = "Invalid user credentials. Please try again."
+      flash[:notice] = "Invalid user credentials. Please try again."
       redirect_to login_path
     end
   end
@@ -19,13 +22,17 @@ class UsersController < ApplicationController
   def show
   end
 
-  private
-
-  def user_creation_params
-    params.permit(:email_address, :password)
+  def dashboard
+    @user = User.find(session[:user_id])
   end
+
+  private
 
   def user_params
     params.require(:user).permit(:email_address, :password)
   end
+
+  # def ensure_email_is_unique
+  #   session[:email_address].uniq
+  # end
 end
