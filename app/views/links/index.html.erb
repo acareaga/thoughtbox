@@ -1,5 +1,14 @@
-User Dashboard - Links Index
+User Dashboard - Links Index <br><br>
 
-<br><br>
-
-<%= link_to "Logout", logout_path %>
+<% @links.each do |link| %>
+   <td>
+     <%= link.title %><br>
+   </td>
+   <td>
+     <%= link.url %><br>
+   </td>
+   <td>
+     <%= link.read %><br>
+   </td><br><br>
+ </tr>
+<% end %>
