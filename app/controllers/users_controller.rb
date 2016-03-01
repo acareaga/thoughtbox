@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   def new
     @new_user = User.new
   end
@@ -14,9 +13,6 @@ class UsersController < ApplicationController
       flash[:notice] = "Invalid user credentials. Please try again."
       redirect_to login_path
     end
-  end
-
-  def show
   end
 
   def dashboard
