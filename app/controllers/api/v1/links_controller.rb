@@ -6,7 +6,9 @@ class Api::V1::LinksController < ApplicationController
   end
 
   def create
-    respond_with current_user.links.create(link_params), location: nil
+    if valid(params[:url])
+      respond_with current_user.links.create(link_params), location: nil
+    end
   end
 
   def update

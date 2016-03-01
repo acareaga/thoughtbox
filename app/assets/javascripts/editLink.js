@@ -20,7 +20,7 @@ function editLinkTitle() {
 };
 
 function editLinkUrl() {
-  $('#link-index').delegate('#link-body', 'keydown', function(event) {
+  $('#link-index').delegate('#link-url', 'keydown', function(event) {
     var enterKeyHit = event.which == 13
 
     if (enterKeyHit) {

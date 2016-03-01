@@ -18,10 +18,10 @@
 $(document).ready(function(){
   fetchLinks();
   createLink();
-  deleteLink();
   editLinkTitle();
   editLinkUrl();
-  linkSearch();
   increaseReadStatus();
   decreaseReadStatus();
+  deleteLink();
+  linkSearch();
 });

@@ -7,8 +7,8 @@ function linkSearch() {
 
     var hiddenLinks = links.filter(function() {
       var titleAndUrlText = $(this).find('#link-title, #link-url')
-                                    .text()
-                                    .toLowerCase();
+                                   .text()
+                                   .toLowerCase();
       return !(titleAndUrlText.includes(searchTerm));
     });
 
