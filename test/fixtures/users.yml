@@ -1,0 +1,7 @@
+one:
+  email_address: steve@apple.com
+  password_digest: pass
+
+two:
+  email_address: bill@microsoft.com
+  password_digest: pass
