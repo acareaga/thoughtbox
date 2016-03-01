@@ -19,7 +19,7 @@ function renderIndex(link) {
       +"<td id='link-title' contenteditable='true'>"+ link.title +"</td>"
       +"<td id='link-url' contenteditable='true'>"+ link.url +"</td>"
       +"<td id='link-read'>"+ link.read +"</td>"
-      +"<td><a class='waves-effect waves-teal btn-flat increase-link-read'> + </a></td>"
+      +"<td><a class='waves-effect waves-teal btn-flat increase-link-read'> ✓ </a></td>"
       +"<td><a class='waves-effect waves-teal btn-flat decrease-link-read'> - </a></td>"
       +"<td><a class='waves-effect waves-teal btn-flat' id='delete-link'>Delete</a></td>"
     +"</tbody>"
