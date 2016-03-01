@@ -1,6 +1,6 @@
 # Thoughtbox
 
-[Live App](http://www.thoughtcentral.herokuapp.com)
+[Live App](https://www.thoughtcentral.herokuapp.com)
 
 ## Description
 
